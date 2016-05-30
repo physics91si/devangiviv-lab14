@@ -1,6 +1,6 @@
 Initial program performance (runtime, bottlenecks, scaling with n):
 
-Fix 1:
+Fix 1: I missed this lecture and am not sure what the "algorithm from lecture" refers to, but I took a look at the lecture slides and worked on improving bad.py 
 New program performance:
 
 etc.

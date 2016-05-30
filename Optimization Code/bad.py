@@ -1,13 +1,16 @@
+import math
+
 # Purposefully bad!!! Fix me!!!
 fi = open('artistdata.csv')
 txt = fi.read()
 lines = txt.split('\n')
 lines = lines[1:] # ignore the header
+fi.close()
 
 artists = {}
 
 for line in lines:
-    if not line: continue
+    assert(line)
     sp = line.split(',')
     artist = sp[0]
     rest = sp[1:]
@@ -31,12 +34,12 @@ for artist in artists:
         # Find the norms
         norm1 = 0
         for v in vector:
-            norm1 = norm1 + v*v
-        import math
+            norm1 += v*v
+   
         norm1 = math.sqrt(norm1)
         norm2 = 0
         for v in refvector:
-            norm2 = norm2 + v*v
+            norm2 += v*v
         norm2 = math.sqrt(norm2)
         sim = numerator/(norm1*norm2)
         #print artist, sim
